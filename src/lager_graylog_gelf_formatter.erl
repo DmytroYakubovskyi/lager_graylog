@@ -93,7 +93,7 @@ on_encode_failure(Opts) ->
 
 -spec encode([tuple()]) -> binary() | no_return().
 encode(Props) ->
-    jiffy:encode({Props}).
+    jsx:encode({Props}).
 
 -spec safely_encode([tuple()], OnFailMessage :: binary()) -> binary().
 safely_encode(Props, OnFailMessage) ->
